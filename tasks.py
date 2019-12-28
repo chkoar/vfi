@@ -29,5 +29,5 @@ def test(ctx):
 
 @task
 def lint(ctx):
-    ctx.run("black . --check")
-    ctx.run("flake8")
+    ctx.run("black vfi --check")
+    ctx.run("flake8 vfi")

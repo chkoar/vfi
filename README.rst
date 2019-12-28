@@ -1,15 +1,12 @@
 .. -*- mode: rst -*-
 
-|Travis|_ |Codecov|_ |CircleCI|_ |ReadTheDocs|_
+|Travis|_ |Codecov|_ |ReadTheDocs|_
 
 .. |Travis| image:: https://travis-ci.org/chkoar/vfi.svg?branch=master
 .. _Travis: https://travis-ci.org/chkoar/vfi
 
 .. |Codecov| image:: https://codecov.io/gh/chkoar/vfi/branch/master/graph/badge.svg
 .. _Codecov: https://codecov.io/gh/chkoar/vfi
-
-.. |CircleCI| image:: https://circleci.com/gh/chkoar/vfi.svg?style=shield&circle-token=:circle-token
-.. _CircleCI: https://circleci.com/gh/chkoar/vfi/tree/master
 
 .. |ReadTheDocs| image:: https://readthedocs.org/projects/vfi/badge/?version=latest
 .. _ReadTheDocs: https://vfi.readthedocs.io/en/latest/?badge=latest
