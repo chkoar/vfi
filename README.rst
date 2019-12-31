@@ -13,7 +13,7 @@
 VFI
 ===
 
-VFI - Voting Feature Intervals is a supervised classification model similar to Naive Bayes. Constucts intervals around each class for each feature. Class counts are recorded for each interval on each feature and the classification is performed using a voting scheme.
+VFI - Voting Feature Intervals is a supervised classification model similar to Naive Bayes. Constructs intervals around each class for each feature. Class counts are recorded for each interval on each feature and the classification is performed using a voting scheme.
 
 Based on the paper: G. Demiroz, A. Guvenir: Classification by voting feature intervals. In: 9th European Conference on Machine Learning, 85-92, 1997.01.
 
