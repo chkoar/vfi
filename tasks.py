@@ -10,8 +10,9 @@ def dist(ctx):
 
 @task
 def publish(ctx):
-    ctx.run("pip install 'twine>=1.5.0'")
-    ctx.run("twine upload dist/*")
+    ctx.run("pip install twine>=1.5.0")
+    ctx.run("pip install twine>=1.5.0")
+    ctx.run("twine upload dist/* --verbose")
     shutil.rmtree("build")
     shutil.rmtree("dist")
     shutil.rmtree("vfi.egg-info")

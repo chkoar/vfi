@@ -1,24 +1,22 @@
 #! /usr/bin/env python
 """A template for scikit-learn compatible packages."""
 
-import codecs
 import os
 
 from setuptools import find_packages, setup
 
-# get __version__ from _version.py
 ver_file = os.path.join("vfi", "_version.py")
 with open(ver_file) as f:
     exec(f.read())
 
 DISTNAME = "vfi"
 DESCRIPTION = "Voting by Feature Intervals classifier."
-with codecs.open("README.rst", encoding="utf-8-sig") as f:
+with open("README.rst", encoding="utf-8") as f:
     LONG_DESCRIPTION = f.read()
 MAINTAINER = "Christos K. Aridas"
 MAINTAINER_EMAIL = "ichkoar@gmail.com"
 URL = "https://github.com/chkoar/vfi"
-LICENSE = "new BSD"
+LICENSE = "MIT"
 DOWNLOAD_URL = "https://github.com/chkoar/vfi"
 VERSION = __version__
 INSTALL_REQUIRES = ["numpy", "scipy", "scikit-learn"]

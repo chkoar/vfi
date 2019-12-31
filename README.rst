@@ -1,5 +1,3 @@
-.. -*- mode: rst -*-
-
 |Travis|_ |Codecov|_ |ReadTheDocs|_
 
 .. |Travis| image:: https://travis-ci.org/chkoar/vfi.svg?branch=master
@@ -60,7 +58,7 @@ pip to at least version 10 and try again:
     pip install --upgrade pip
     pip install vfi
 
-Otherwise install the dependencies manually using anaconda followed by pulling hdbscan from pip:
+Otherwise install the dependencies manually using anaconda followed by pulling vfi from pip:
 
 .. code:: bash
 
@@ -118,4 +116,4 @@ you and get your code merged into the main branch.
 Licensing
 ---------
 
-The hdbscan package is 3-clause BSD licensed. Enjoy.
+The vfi package is MIT licensed. Enjoy.
