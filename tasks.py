@@ -10,8 +10,8 @@ def dist(ctx):
 
 @task
 def publish(ctx):
-    ctx.run("pip install twine>=1.5.0")
-    ctx.run("pip install twine>=1.5.0")
+    ctx.run("python -m pip install --upgrade pip")
+    ctx.run("pip install setuptools wheel twine")
     ctx.run("twine upload dist/* --verbose")
     shutil.rmtree("build")
     shutil.rmtree("dist")
