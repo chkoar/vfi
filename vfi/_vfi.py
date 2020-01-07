@@ -1,3 +1,5 @@
+import numbers
+
 import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.preprocessing import LabelEncoder, KBinsDiscretizer, normalize
@@ -76,6 +78,7 @@ class VFI(BaseEstimator, ClassifierMixin):
                Returns self.
         """
 
+        self._validate_params()
         X, y = check_X_y(X, y)
         check_classification_targets(y)
 
@@ -158,3 +161,12 @@ class VFI(BaseEstimator, ClassifierMixin):
         probas = normalize(class_votes, axis=1, norm="l1")
 
         return probas
+
+    def _validate_params(self):
+        if isinstance(self.n_bins, numbers.Integral) and self.n_bins < 2:
+            msg = (
+                "{} received an invalid value for parameter 'n_bins'. "
+                "Valid values are 'auto' or any integer > 1."
+            )
+            msg = msg.format(self.__class__.__name__)
+            raise ValueError(msg)
