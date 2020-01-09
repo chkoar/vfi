@@ -16,7 +16,7 @@ class VFI(BaseEstimator, ClassifierMixin):
 
     Parameters
     ----------
-    n_bins : int or array-like, shape (n_features,) (default="auto")
+    n_bins : int (default="auto")
         The number of bins to produce. When is set to 'auto' the n_bins
         equals to the double of the number of classes. Raises ValueError
         if n_bins < 2.
@@ -44,7 +44,7 @@ class VFI(BaseEstimator, ClassifierMixin):
     interval_class_counts_ : array, shape (n_features, n_bins, n_classes,)
         Contains the raw class counts per feature and per bin.
 
-    n_bins_ : int or array-like, shape (n_features,).
+    n_bins_ : int
         The number of bins used during fit.
 
     n_classes_ : int
@@ -163,7 +163,10 @@ class VFI(BaseEstimator, ClassifierMixin):
         return probas
 
     def _validate_params(self):
-        if isinstance(self.n_bins, numbers.Integral) and self.n_bins < 2:
+        valid_n_bins_1 = isinstance(self.n_bins, numbers.Integral) and self.n_bins > 1
+        valid_n_bins_2 = isinstance(self.n_bins, str) and self.n_bins == "auto"
+        valid_n_bins = valid_n_bins_1 or valid_n_bins_2
+        if not valid_n_bins:
             msg = (
                 "{} received an invalid value for parameter 'n_bins'. "
                 "Valid values are 'auto' or any integer > 1."
