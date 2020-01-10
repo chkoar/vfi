@@ -3,7 +3,8 @@
 VFI Decision Regions
 =============================
 
-In this plot we can compare the decision regions among a VFI classifier against a CART, a Kernel SV model and a 3NN classifier.
+In this plot we can compare the decision regions among a VFI classifier,
+a CART model, a 3NN classifier and a Naive Bayes classifier.
 """
 
 print(__doc__)
@@ -47,7 +48,7 @@ f, axarr = plt.subplots(2, 2, sharex="col", sharey="row", figsize=(10, 8))
 for idx, clf, tt in zip(
     product([0, 1], [0, 1]),
     [vfi, clf1, clf2, clf3],
-    ["VFI", "Decision Tree", "KNN (k=3)", "Naive Bayes"],
+    ["VFI", "CART", "KNN (k=3)", "Naive Bayes"],
 ):
 
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
