@@ -121,15 +121,14 @@ class VFI(BaseEstimator, ClassifierMixin):
         Returns
         -------
         y : ndarray, shape (n_samples,)
-            The label for each sample is the label of the closest sample
-            seen during fit.
+            Predicted target values for X.
         """
 
         check_is_fitted(self, ["classes_"])
         X = check_array(X)
 
-        predicted_probabilitiy = self.predict_proba(X)
-        return self.classes_.take((np.argmax(predicted_probabilitiy, axis=1)), axis=0)
+        predicted_probability = self.predict_proba(X)
+        return self.classes_.take((np.argmax(predicted_probability, axis=1)), axis=0)
 
     def predict_proba(self, X):
         """ Return probability estimates for the test vector X.
