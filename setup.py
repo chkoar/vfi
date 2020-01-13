@@ -10,7 +10,7 @@ with open(ver_file) as f:
     exec(f.read())
 
 DISTNAME = "vfi"
-DESCRIPTION = "Voting by Feature Intervals classifier."
+DESCRIPTION = "Classification by Voting Feature Intervals in Python"
 with open("README.rst", encoding="utf-8") as f:
     LONG_DESCRIPTION = f.read()
 MAINTAINER = "Christos K. Aridas"
@@ -31,8 +31,6 @@ CLASSIFIERS = [
     "Operating System :: POSIX",
     "Operating System :: Unix",
     "Operating System :: MacOS",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
 ]
